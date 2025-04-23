@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basel Flames</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 40px;
+    }
+    .menu-toggle {
+      font-size: 22px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .dropdown-menu {
+      display: none;
+      flex-direction: column;
+      background: #444;
+    }
+    .dropdown-menu a {
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-bottom: 1px solid #555;
+    }
+    .dropdown-menu a:hover {
+      background: #555;
+    }
+    section {
+      padding: 20px 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin: auto;
+      padding: 10px;
+    }
+    form input, form textarea, form button {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 14px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 22px;
+      }
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+      form input, form textarea, form button {
+        width: 90%;
+      }
+    }
+
+    /* For small screens (phone portrait) */
+    @media (max-width: 480px) {
+      .logo {
+        height: 30px;
+      }
+      header h1 {
+        font-size: 18px;
+      }
+      .menu-toggle {
+        font-size: 20px;
+      }
+      iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .gallery img {
+        border-radius: 4px;
+      }
+      footer {
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Basel Flames Logo" class="logo">
+    <h1>Basel Flames</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>  
+  <!-- Hamburger Menu Items -->  
+  <nav id="dropdown" class="dropdown-menu">
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+    <a href="#gallery"><i class="fas fa-image"></i> Gallery</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="#support"><i class="fas fa-hand-holding-heart"></i> Support Us</a>
+    <a href="#join"><i class="fas fa-user-plus"></i> Join Us</a>
+  </nav>  
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Basel Flames is a Christian organization from the Junior Youth (JY) of the Presbyterian Church of Ghana, Emmanuel Congregation Tema-Manhean, founded in 2020 by Madam Barbara and Madam Sandra.</p>
+  </section>  
+  <section id="video">
+    <h2>Featured Video</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>  
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <p>Join us on the 25th of December, 2025, for our fifth edition program.</p>
+  </section>  
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <img src="_ENN0288.jpg" alt="Gallery Image 1">
+    <img src="PHOTO 1.jpg" alt="Gallery Image 2">
+    <img src="PHOTO 2.jpg" alt="Gallery Image 3">
+    <img src="PHOTO 3.jpg" alt="Gallery Image 4">
+    <img src="ET_Gallery (57 of 488).jpg" alt="Gallery Image 5">
+  </section>  
+  <section id="playlist">
+    <h2>Basel Flames TV Playlist</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=UUBYZ7fbThQeO1Ih76sMkF6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Call/WhatsApp: <strong>+233595555815</strong></p>
+    <ul>
+      <li><a href="https://www.facebook.com/BaselFlamesTV" target="_blank">Facebook: Basel Flames TV</a></li>
+      <li><a href="https://www.instagram.com/BaselFlamesTV" target="_blank">Instagram: @BaselFlamesTV</a></li>
+      <li><a href="https://www.youtube.com/c/BaselFlamesTV" target="_blank">YouTube: Basel Flames TV</a></li>
+      <li><a href="https://www.tiktok.com/@BaselFlamesTV" target="_blank">TikTok: @BaselFlamesTV</a></li>
+    </ul>
+  </section>  
+  <section id="support">
+    <h2>Support Us</h2>
+    <p>We are in need of sponsorships and donations to help our organization grow. Any support is appreciated.</p>
+    <div class="form-container">
+      <h3>Contact Form</h3>
+      <form action="https://formsubmit.co/baselflames@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>  
+  <!-- Join Us Membership Form -->  
+  <section id="join">
+    <h2>Join Basel Flames</h2>
+    <p>Interested in joining Basel Flames? Fill out the form below and we’ll get in touch with you!</p>
+    <form action="https://formsubmit.co/baselflames@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="number" name="age" placeholder="Age" min="5" required />
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" name="location" placeholder="Your Location" required />
+      <select name="role" required>
+        <option value="">Preferred Role</option>
+        <option value="Drama">Drama</option>
+        <option value="Dance">Dance</option>
+        <option value="Media">Media</option>
+        <option value="Choir">Choir</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" name="availability" placeholder="Days Available (e.g., Weekends, Sundays)" required />
+      <input type="text" name="referral" placeholder="How did you hear about us?" required />
+      <textarea name="reason" placeholder="Why do you want to join?" rows="4" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+    <p>Or <a href="https://wa.me/+233595555815" target="_blank">WhatsApp us directly</a> to apply.</p>
+  </section>  
+  <footer>
+    <p>&copy; 2025 Basel Flames. All rights reserved.</p>
+  </footer>  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdown');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
